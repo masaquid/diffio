@@ -44,7 +44,7 @@ export default function TextAreaWithLineNumbers({
       <div
         ref={lineNumbersRef}
         className="flex-shrink-0 w-12 bg-white/5 border-r border-white/20 overflow-hidden"
-        style={{ scrollTop }}
+        style={{ transform: `translateY(-${scrollTop}px)` }}
       >
         <div className="py-4 pr-2 text-right text-xs font-mono text-white/50 leading-5 select-none">
           {Array.from({ length: lineCount }, (_, i) => (
