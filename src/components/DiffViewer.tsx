@@ -24,7 +24,7 @@ export default function DiffViewer({ diffResults, title, diffType, onDiffTypeCha
       await navigator.clipboard.writeText(diffText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
+    } catch {
       // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = diffText;
