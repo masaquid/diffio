@@ -48,29 +48,24 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto p-4">
-        <header className="backdrop-blur-lg bg-white/20 rounded-2xl border border-white/30 shadow-xl p-6 mb-6">
+      <div className="container mx-auto p-2">
+        <header className="p-4 mb-4">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-1">
+            <h1 className="text-4xl font-serif font-light text-white mb-1 tracking-[0.3em] animate-fade-in-up">
               Diffio
             </h1>
-            <h2 className="text-xl font-semibold text-white/90 mb-2">
-              テキスト差分比較ツール
-            </h2>
-            <p className="text-white/80 text-sm">
+            <p className="text-white/80 text-sm font-serif animate-fade-in-up animation-delay-300">
               2つのテキストの差分を視覚的に比較
             </p>
           </div>
         </header>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-          <div className="backdrop-blur-lg bg-white/10 rounded-2xl border border-white/30 shadow-xl p-6">
-            <h2 className="text-xl font-semibold text-white mb-4">テキスト 1</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+          <div className="backdrop-blur-lg bg-white/10 rounded-2xl border border-white/30 shadow-xl p-4">
             <div className="mb-4">
               <FileUpload
                 onFileContent={(content) => setLeftText(content)}
-                label="テキスト 1"
               />
             </div>
             <TextAreaWithLineNumbers
@@ -80,12 +75,10 @@ export default function Home() {
             />
           </div>
 
-          <div className="backdrop-blur-lg bg-white/10 rounded-2xl border border-white/30 shadow-xl p-6">
-            <h2 className="text-xl font-semibold text-white mb-4">テキスト 2</h2>
+          <div className="backdrop-blur-lg bg-white/10 rounded-2xl border border-white/30 shadow-xl p-4">
             <div className="mb-4">
               <FileUpload
                 onFileContent={(content) => setRightText(content)}
-                label="テキスト 2"
               />
             </div>
             <TextAreaWithLineNumbers
@@ -96,9 +89,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="backdrop-blur-lg bg-white/20 rounded-2xl border border-white/30 shadow-xl p-6 mb-8">
+        <div className="backdrop-blur-lg bg-white/20 rounded-2xl border border-white/30 shadow-xl p-4 mb-4">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-semibold text-white">統計情報</h3>
+            <h3 className="text-xl font-semibold text-white whitespace-nowrap min-w-20 mr-2.5">統計情報</h3>
             <div className="flex gap-2">
               <button 
                 onClick={handleExportHtml}
@@ -115,15 +108,15 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4 text-center">
-            <div className="bg-white/10 rounded-lg p-4">
+            <div className="bg-white/10 rounded-lg p-2">
               <div className="text-2xl font-bold text-green-400">{stats.added}</div>
               <div className="text-white/80">追加</div>
             </div>
-            <div className="bg-white/10 rounded-lg p-4">
+            <div className="bg-white/10 rounded-lg p-2">
               <div className="text-2xl font-bold text-red-400">{stats.removed}</div>
               <div className="text-white/80">削除</div>
             </div>
-            <div className="bg-white/10 rounded-lg p-4">
+            <div className="bg-white/10 rounded-lg p-2">
               <div className="text-2xl font-bold text-yellow-400">{stats.changed}</div>
               <div className="text-white/80">変更</div>
             </div>
