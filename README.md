@@ -89,7 +89,7 @@ Diffioは、開発者とライター向けに設計された美しいモダン�
 
 ## 📄 ライセンス
 
-MIT License - [詳細はLICENSEファイルを参照](LICENSE)
+MIT License
 
 ---
 *Diffio - Beautiful, Modern Text Difference Tool for Developers and Writers*
